@@ -1,0 +1,47 @@
+{
+  "name": "wayfarer-api",
+  "version": "1.0.0",
+  "description": "WayFarer is a public bus transportation booking server. This repository shows how to develop the back-end API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --require @babel/register 'backend/tests/**spec.js'",
+    "start": "node build backend/server.js",
+    "start:dev": "set DEBUG=dev & nodemon --exec babel-node backend/server.js",
+    "build": "babel server -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austainodedon/WayFarer-API.git"
+  },
+  "keywords": [
+    "wayfarer",
+    "api",
+    "share",
+    "ride"
+  ],
+  "author": "Augustine Emeka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austainodedon/WayFarer-API/issues"
+  },
+  "homepage": "https://github.com/austainodedon/WayFarer-API#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.3",
+    "@babel/register": "^7.4.4",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
