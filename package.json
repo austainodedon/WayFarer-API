@@ -75,6 +75,9 @@
       "node"
     ]
   },
+  "engines": {
+    "node": "10.13.0"
+  },
   "keywords": [],
   "author": "Augustine Emeka",
   "license": "ISC",
