@@ -35,8 +35,8 @@ const config = {
 
   production: {
     server: {
-      port: process.env.PORT || 3000,
-      hostname: process.env.HOSTNAME || '0.0.0.0',
+      port: process.env.PORT || 3000 || process.env.YOUR_PORT,
+      hostname: process.env.HOSTNAME || '0.0.0.0' || process.env.YOUR_HOST,
     },
     database: {
       user: 'hszhzpnl',
