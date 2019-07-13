@@ -17,7 +17,7 @@
     "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",
     "coverage:dev": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage:dev",
     "build:dev": "rm -rf ./build && babel -d ./build ./app -s",
-    "heroku buildpacks": "set heroku/node"
+    "heroku-buildpacks": "set heroku/node"
   },
   "repository": {
     "type": "git",
