@@ -1,67 +1,85 @@
 {
-  "name": "wayfarer-api",
+  "name": "wayfarer-use",
   "version": "1.0.0",
-  "engines": {
-    "node": "10.13.0"
-  },
-  "description": "WayFarer is a public bus transportation booking server. This repository shows how to develop the back-end API",
-  "main": "server.js",
+  "description": "Public Bus sharing API",
+  "main": "bin/www",
   "scripts": {
-    "heroku-postbuild": "npm install --production",
-    "test": "nyc mocha --require babel-register --require babel-polyfill dist/tests/users.test.js --exit",
-    "build": "babel backend --out-dir build",
-    "start": "node build backend/server.js",
-    "start:dev": "set DEBUG=dev & nodemon --exec babel-node backend/server.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "dist": "babel --require babel-polyfill backend -d dist",
-    "db": "babel-node ./backend/model/conn"
+    "start": "node  ./bin/www",
+    "start:dev": "nodemon --exec babel-node ./bin/www && cross-env NODE_ENV=development && npm run build:dev ",
+    "test": "mocha --reporter spec --exit --t=10000 --color=true  test/*.js --exec babel-node",
+    "test:watch": "nyc mocha  --require babel-core/register --reporter  spec --watch  test/ --exec babel-node",
+    "eslint": "eslint app/**/*.js test/*.js --fix --ignore-pattern \"node_modules/\"",
+    "test:dev": "cross-env NODE_ENV=test mocha --reporter spec --exit --t=10000 --color=true test/*.js --exec babel-node",
+    "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "export CODECLIMATE_REPO_TOKEN=3e7edd83e8b2cb79c3c7d161110866257359f27d8e82bf5402d00145c529ffa4 && codeclimate-test-reporter < lcov.info",
+    "codeclimate-coverage:dev": "set CODECLIMATE_REPO_TOKEN=3e7edd83e8b2cb79c3c7d161110866257359f27d8e82bf5402d00145c529ffa4 && codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",
+    "coverage:dev": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage:dev",
+    "build:dev": "rm -rf ./build && babel -d ./build ./app -s"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/austainodedon/WayFarer-API.git"
+    "url": ""
   },
-  "keywords": [
-    "wayfarer",
-    "api",
-    "share",
-    "ride"
-  ],
-  "author": "Augustine Emeka",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/austainodedon/WayFarer-API/issues"
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "logger": "0.0.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0"
   },
-  "homepage": "https://github.com/austainodedon/WayFarer-API#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint ",
+      "pre-push": "npm run test:dev && npm run coverage:dev"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
     "@babel/node": "^7.5.0",
-    "@babel/preset-env": "^7.5.3",
-    "@babel/register": "^7.4.4",
-    "babel-register": "^6.26.0",
-    "chai-http": "^4.3.0",
-    "coveralls": "^3.0.4",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0",
-    "mocha": "^6.1.4",
-    "nodemon": "^1.19.1",
-    "nyc": "^14.1.1"
-  },
-  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.0",
+    "@babel/runtime": "^7.4.3",
     "babel-polyfill": "^6.26.0",
-    "bcrypt": "^3.0.6",
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "cors": "^2.8.5",
-    "debug": "^4.1.1",
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "joi": "^14.3.1",
-    "jsonwebtoken": "^8.5.1",
-    "make-runnable": "^1.3.6",
-    "moment": "^2.24.0",
-    "morgan": "^1.9.1",
-    "pg": "^7.11.0"
-  }
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "codeclimate-test-reporter": "^0.5.1",
+    "coveralls": "^3.0.4",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "husky": "^3.0.0",
+    "mocha": "^6.1.4",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "uuid": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "node"
+    ]
+  },
+  "keywords": [],
+  "author": "Augustine Emeka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austainoedon/wayfarer-api/issues"
+  },
+  "homepage": "https://github.com/austainodedon/wayfarer-api#readme"
 }
