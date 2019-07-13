@@ -40,7 +40,7 @@ const config = {
     },
     database: {
       user: 'hszhzpnl',
-      host: 'loraja.db.elephantsql.com',
+      host: 'raja.db.elephantsql.com',
       database: 'hszhzpnl',
       password: 'QZftMMkoK7uL3mca_xn4wnaDOFxReAks',
       port: '5432',
