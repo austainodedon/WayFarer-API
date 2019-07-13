@@ -39,10 +39,10 @@ const config = {
       hostname: process.env.HOSTNAME || '0.0.0.0',
     },
     database: {
-      user: 'postgres',
-      host: 'localhost',
-      database: 'wayfarer',
-      password: 'postgres',
+      user: 'hszhzpnl',
+      host: 'loraja.db.elephantsql.com',
+      database: 'hszhzpnl',
+      password: 'QZftMMkoK7uL3mca_xn4wnaDOFxReAks',
       port: '5432',
       ssl: true,
 

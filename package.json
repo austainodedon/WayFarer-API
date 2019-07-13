@@ -38,8 +38,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint ",
-      "pre-push": "npm run test:dev && npm run coverage:dev"
+      "pre-commit": "npm run eslint "
+    
     }
   },
   "devDependencies": {

@@ -1,0 +1,38 @@
+
+
+
+
+
+info [Sat Jul 13 2019 14:35:19 GMT+0200 (Central European Summer Time)]  bus id is undefined
+error [Sat Jul 13 2019 14:35:20 GMT+0200 (Central European Summer Time)]  { error: database "wayfarer_test" does not exist
+    at Connection.parseE (C:\Users\PERSONAL\Desktop\WayFarer-API\node_modules\pg\lib\connection.js:602:11)
+    at Connection.parseMessage (C:\Users\PERSONAL\Desktop\WayFarer-API\node_modules\pg\lib\connection.js:399:19)
+    at Socket.<anonymous> (C:\Users\PERSONAL\Desktop\WayFarer-API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  name: 'error',
+  length: 162,
+  severity: 'FATAL',
+  code: '3D000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file:
+   'd:\\pginstaller.auto\\postgres.windows-x64\\src\\backend\\utils\\init\\postinit.c',
+  line: '855',
+  routine: 'InitPostgres' }
+
+
+
+
