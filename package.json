@@ -1,7 +1,7 @@
 {
-  "name": "wayfarer-use",
+  "name": "wayfarer-api",
   "version": "1.0.0",
-  "description": "Public Bus sharing API",
+  "description": "Public Bus sharing API fro Andela",
   "main": "bin/www",
   "scripts": {
     "start": "node  ./bin/www",
