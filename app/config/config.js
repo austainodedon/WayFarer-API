@@ -35,14 +35,14 @@ const config = {
 
   production: {
     server: {
-      port: process.env.PORT || 8002,
-      hostname: process.env.HOSTNAME || 'localhost',
+      port: process.env.PORT || 3000,
+      hostname: process.env.HOSTNAME || '0.0.0.0',
     },
     database: {
-      user: 'iyfuthdxraayah',
-      host: 'ec2-174-129-29-101.compute-1.amazonaws.com',
-      database: 'df6k9h555q07ar',
-      password: '892b54e56f50fa41ea695d10f5f5fd49dd42685f74fe482e6089aaca7ce7d270',
+      user: 'postgres',
+      host: 'localhost',
+      database: 'wayfarer',
+      password: 'postgres',
       port: '5432',
       ssl: true,
 
