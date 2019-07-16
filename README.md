@@ -8,7 +8,7 @@
 ### Installation
 To install this application,
 
-  1. Git clone this repository https://github.com/Boths1229/WayFarer.git
+  1. Git clone this repository https://github.com/austainodedon/WayFarer-api.git
   2. Change your directory cd WayFarer
   3. Install all dependencies using npm install
   4. Create .env file which will be used to load environment variables see sample in .env.example file in the project
@@ -28,7 +28,7 @@ To install this application,
 
 ### API Documentation
 
-  THE Documentation for the WayFarer Restful API: [WayFarer API](https://app.swaggerhub.com/apis/Boths1229/WAYFARER/1.0.0) 
+  THE Documentation for the WayFarer Restful API: [WayFarer API](https://app.swaggerhub.com/apis/austainodedon/WAYFARER-API/1.0.0) 
 
 ### Coding Style
 
@@ -59,14 +59,14 @@ To install this application,
 
 ### Links
 
-  1. Project homepage: https://github.com/Boths1229/WayFarer.git
-  2. Repository: https://github.com/Boths1229/WayFarer.git
-  3. Issue tracker: https://github.com/Boths1229/WayFarer.git/issues
-        * In case of sensitive bugs like security vulnerabilities, please contact bd_world29@yahoo.com directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!  
+  1. Project homepage: https://github.com/austainodedon/WayFarer-api.git
+  2. Repository: https://github.com/austainodedon/WayFarer-api.git
+  3. Issue tracker: https://github.com/austainodedon/WayFarer-api.git/issues
+        * In case of sensitive bugs like security vulnerabilities, please contact c3ono32@yahoo.com directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!  
 
 ### Licensing
 
-  [MIT License](https://github.com/Boths1229/WayFarer.git/develop/LICENSE) 
+  [MIT License](https://github.com/austainodedon/WayFarer-api.git/develop/LICENSE) 
 
 ### Author
 
