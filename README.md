@@ -28,7 +28,7 @@ To install this application,
 
 ### API Documentation
 
-  THE Documentation for the WayFarer Restful API: [WayFarer API](virtserver.swaggerhub.com/austainodedon/wayfarer/1.0.0) 
+  THE Documentation for the WayFarer Restful API: [WayFarer API](https://app.swaggerhub.com/apis/austainodedon/wayfarer/1.0.0) 
 
 ### Coding Style
 
