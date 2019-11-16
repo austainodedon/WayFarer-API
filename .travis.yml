@@ -14,7 +14,7 @@ env:
   - NODE_ENV=test
 
 before_script:
-  - psql -c 'create database wayfarer_test;' -U postgres
+  - psql -c 'create database wayfarer;' -U postgres
   - psql -c "CREATE USER austaino WITH PASSWORD null;" -U postgres
   - npm run build
 script:
@@ -38,8 +38,8 @@ after_success:
 # services:
 #     - postgresql
 # before_script:
-#     - psql -c 'create database wayfarer_test;' -U postgres
-#     - psql -c 'create USER chuksEmma WITH PASSWORD null;' -U postgres
+#     - psql -c 'create database wayfarer;' -U postgres
+#     - psql -c 'create USER austaino WITH PASSWORD null;' -U postgres
 #     - npm run build
 # after_success:
 #     - npm run coveralls    
