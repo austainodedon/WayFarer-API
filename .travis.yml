@@ -15,7 +15,7 @@ env:
 
 before_script:
   - psql -c 'create database wayfarer_test;' -U postgres
-  - psql -c "CREATE USER chuksEmma WITH PASSWORD null;" -U postgres
+  - psql -c "CREATE USER austaino WITH PASSWORD null;" -U postgres
   - npm run build
 script:
   - npm run int:test
